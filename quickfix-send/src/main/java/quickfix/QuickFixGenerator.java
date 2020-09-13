@@ -11,9 +11,9 @@ public class QuickFixGenerator {
         task.setName("Custom quickfix");
         task.setSpecification(new File("spec/CustomFIX.xml"));
         task.setTransformDirectory(new File("transforms"));
-        task.setOutputBaseDirectory(new File("quickfix-send/src/main/java/quickfix"));
-        task.setMessagePackage("messages");
-        task.setFieldPackage("fields");
+        task.setOutputBaseDirectory(new File("quickfix-send/src/main/java"));
+        task.setMessagePackage("quickfix.messages");
+        task.setFieldPackage("quickfix.fields");
         MessageCodeGenerator messageCodeGenerator = new MessageCodeGenerator();
         messageCodeGenerator.generate(task);
     }
